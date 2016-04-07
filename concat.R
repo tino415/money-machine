@@ -5,6 +5,8 @@ read_data <- function() {
 
 	data = as.matrix((lapply(files, read.csv, sep = ';'))[[1]])
 
+	colnames(data) <- c("datetime", "open", "high", "low", "close", "return")
+
 	return (data)
 }
 
